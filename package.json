@@ -8,9 +8,10 @@
     "test": "testem ci",
     "test:watch": "testem",
     "test:examples": "testem ci -f examples/testem.json",
-    "lint": "eslint . && flow check",
+    "lint": "eslint src test && flow check",
+    "lint:examples": "eslint examples",
     "build": "babel src --out-dir dist",
-    "prepublish": "npm run clean && npm run lint && npm run test && npm run build && npm run test:examples"
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build && npm run lint:examples && npm run test:examples"
   },
   "files": [
     "dist",
