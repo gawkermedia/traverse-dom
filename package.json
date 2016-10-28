@@ -5,7 +5,7 @@
   "main": "./dist/traverse-dom.js",
   "scripts": {
     "clean": "del-cli dist/*",
-    "test": "testem ci",
+    "test": "testem ci -P 10",
     "test:watch": "testem",
     "test:examples": "testem ci -f examples/testem.json",
     "lint": "eslint src test && flow check",
@@ -19,18 +19,18 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/gawkermedia/traverse-dom.git"
   },
   "keywords": [
     "traverse",
     "dom"
   ],
-  "author": "",
+  "author": "Oliver Kovacs <oliver@kinja.com>",
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/gawkermedia/traverse-dom/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/gawkermedia/traverse-dom#traverse-dom",
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.18.0",
@@ -53,6 +53,7 @@
     "html2js-browserify": "^1.1.0",
     "jquery": "^3.1.1",
     "mocha": "^3.1.2",
+    "phantomjs": "^2.1.7+deprecated",
     "testem": "^1.12.0"
   }
 }
