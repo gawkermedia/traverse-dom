@@ -21,14 +21,12 @@ $ yarn add traverse-dom
 
 ```
 import traverse from 'traverse-dom';
-
 traverse(myElement, (child) => { mutateElement(child) });
 ```
 
 ```
 import { traverseMap } from 'traverse-dom';
-
-traverseMap(myElement, (child) => child.nodeName);
+const allNodeNames = traverseMap(myElement, (child) => child.nodeName);
 ```
 
 ## API
@@ -40,17 +38,17 @@ If `shouldRecurse` is `true` does a deep traversal.
 If `shouldRecurse` is a function it will be called on each element to provide fine control
 over what element's children to traverse.
 
+usage example: [moving elements outside of another element.](examples/blockquote.js#L24)
+
 #### Arguments
 
-`element: Element`: element to traverse children of.
-
-`callback: (child: Element) => void`: Callback to pass each child element.
-
-`shouldRecurse: boolean | (child: Element) => boolean = false`: Set to traverse deeper than immediate children of `element`.
+ 1. `element: Element` - Element to traverse children of.
+ 2. `callback: (child: Element) => void` - Callback to pass each child element.
+ 3. `shouldRecurse: boolean | (child: Element) => boolean = false` - Set to traverse deeper than immediate children of `element`.
 
 #### Returns
 
-`Element`: Returns the same element the function was called with.
+`Element` - Returns the same element the function was called with.
 
 
 
@@ -60,15 +58,13 @@ Same as [traverse](README.md#traverseelement-callback-shouldrecursefalse) but tr
 
 #### Arguments
 
-`node: Node`: node to traverse children of.
-
-`callback: (child: Node) => void`: Callback to pass each child node.
-
-`shouldRecurse: boolean | (child: Node) => boolean = false`: Set to traverse deeper than immediate children of `node`.
+ 1. `node: Node` - Node to traverse children of.
+ 2. `callback: (child: Node) => void` - Callback to pass each child node.
+ 3. `shouldRecurse: boolean | (child: Node) => boolean = false` - Set to traverse deeper than immediate children of `node`.
 
 #### Returns
 
-`Node`: Returns the same node the function was called with.
+`Node` - Returns the same node the function was called with.
 
 
 
@@ -77,17 +73,17 @@ Same as [traverse](README.md#traverseelement-callback-shouldrecursefalse) but tr
 Creates an array of values by running each children of the passed node through the callback.
 Callback is invoked with the child node.
 
+usage example: Collecting all the node names recursively.
+
 #### Arguments
 
-`node: Node`: node to traverse children of.
-
-`callback: (child: Node) => T`: The function invoked per iteration.
-
-`shouldRecurse: boolean | (child: Node) => boolean = false`: Set to traverse deeper than immediate children of `node`.
+ 1. `node: Node` - Node to traverse children of.
+ 2. `callback: (child: Node) => T` - The function invoked per iteration.
+ 3. `shouldRecurse: boolean | (child: Node) => boolean = false` - Set to traverse deeper than immediate children of `node`.
 
 #### Returns
 
-`Array<T>`: Returns the new mapped array.
+`Array<T>` - Returns the new mapped array.
 
 
 
@@ -96,19 +92,20 @@ Callback is invoked with the child node.
 Reduces the node's children to a value which is the accumulated result of running each node thru
 `callback` where each successive invocation is supplied the return value of the previous.
 
+usage example: [collecting all the node names recursively while filtering the result.](examples/blockquote.js#L38)
+
 #### Arguments
 
-`node: Node`: node to traverse children of.
-
-`callback: (child: Node) => T`: The function invoked per iteration.
-
-`acc: T`: The initial value.
-
-`shouldRecurse: boolean | (child: Node) => boolean = false`: Set to traverse deeper than immediate children of `node`.
+ 1. `node: Node` - Node to traverse children of.
+ 2. `callback: (child: Node) => T` - The function invoked per iteration.
+ 3. `acc: T` - The initial value.
+ 4. `shouldRecurse: boolean | (child: Node) => boolean = false` - Set to traverse deeper than immediate children of `node`.
 
 #### Returns
 
-`T`: Returns the accumulated value.
+`T` - Returns the accumulated value.
+
+
 
 ## Contributing to traverse-dom
 
