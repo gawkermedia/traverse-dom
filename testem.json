@@ -1,8 +1,8 @@
 {
   "framework": "mocha",
   "src_files": ["src/traverse-dom.js"],
-  "serve_files": ["lib/tests-bundle.js"],
-  "before_tests": "browserify -t [ babelify ] -t [ html2js-browserify --minify --collapseWhitespace ] test/index.js -o lib/tests-bundle.js",
-  "on_exit": "rimraf lib/tests-bundle.js",
+  "serve_files": ["dist/tests-bundle.js"],
+  "before_tests": "browserify -t [ babelify ] -t [ html2js-browserify --minify --collapseWhitespace ] test/index.js -o dist/tests-bundle.js",
+  "on_exit": "del-cli dist/tests-bundle.js",
   "launch_in_dev": ["Chrome"]
 }

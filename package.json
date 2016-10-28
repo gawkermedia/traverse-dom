@@ -4,13 +4,13 @@
   "description": "Simple DOM traversal methods with some tolerance for modification of the element tree during traversal",
   "main": "./dist/traverse-dom.js",
   "scripts": {
-    "clean": "rimraf dist",
-    "test": "testem ci && npm run test:examples",
+    "clean": "del-cli dist/*",
+    "test": "testem ci",
     "test:watch": "testem",
     "test:examples": "testem ci -f examples/testem.json",
     "lint": "eslint . && flow check",
     "build": "babel src --out-dir dist",
-    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build && npm run test:examples"
   },
   "files": [
     "dist",
@@ -40,6 +40,7 @@
     "babel-preset-stage-2": "^6.17.0",
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
+    "del-cli": "^0.2.0",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-flowtype": "^2.20.0",
@@ -50,7 +51,6 @@
     "html2js-browserify": "^1.1.0",
     "jquery": "^3.1.1",
     "mocha": "^3.1.2",
-    "rimraf": "^2.5.4",
     "testem": "^1.12.0"
   }
 }
