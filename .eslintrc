@@ -1,0 +1,28 @@
+{
+	"parser": "babel-eslint",
+	"extends": [
+		"airbnb",
+		"plugin:flowtype/recommended"
+	],
+	"plugins": [
+		"flowtype"
+	],
+	"env": {
+		"mocha": true
+	},
+	"settings": {
+		"flowtype": {
+			"onlyFilesWithFlowAnnotation": false
+		}
+	},
+	"rules": {
+		"indent": ["error", "tab", { "SwitchCase": 1 }],
+		"no-tabs": 0,
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": true
+			}
+		]
+	}
+}

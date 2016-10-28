@@ -1,0 +1,8 @@
+{
+  "framework": "mocha",
+  "src_files": ["examples/blockquote.js"],
+  "serve_files": ["lib/examples-bundle.js"],
+  "before_tests": "browserify -t [ babelify ] examples/*.js -o lib/examples-bundle.js",
+  "on_exit": "rimraf lib/examples-bundle.js",
+  "launch_in_dev": ["Chrome"]
+}

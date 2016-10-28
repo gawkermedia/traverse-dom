@@ -1,0 +1,56 @@
+{
+  "name": "traverse-dom",
+  "version": "1.0.0",
+  "description": "Simple DOM traversal methods with some tolerance for modification of the element tree during traversal",
+  "main": "./dist/traverse-dom.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "test": "testem ci && npm run test:examples",
+    "test:watch": "testem",
+    "test:examples": "testem ci -f examples/testem.json",
+    "lint": "eslint . && flow check",
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "traverse",
+    "dom"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-eslint": "^7.0.0",
+    "babel-istanbul": "^0.11.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-flow-strip-types": "^6.14.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-2": "^6.17.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-flowtype": "^2.20.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "flow-bin": "^0.33.0",
+    "html2js-browserify": "^1.1.0",
+    "jquery": "^3.1.1",
+    "mocha": "^3.1.2",
+    "rimraf": "^2.5.4",
+    "testem": "^1.12.0"
+  }
+}
