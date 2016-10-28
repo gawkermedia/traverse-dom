@@ -41,7 +41,9 @@ over what element's children to traverse.
 #### Arguments
 
 `element: Element`: element to traverse children of.
+
 `callback: (child: Element) => void`: Callback to pass each child element.
+
 `shouldRecurse: boolean | (child: Element) => boolean = false`: Set to traverse deeper than immediate children of `element`.
 
 #### Returns
@@ -52,12 +54,14 @@ over what element's children to traverse.
 
 ### traverseNodes(node, callback, [shouldRecurse=false])
 
-Same as [traverse][README.md#traverse(element, callback, shouldRecurse)] but traverses nodes not just elements.
+Same as [traverse](README.md#traverseelement-callback-shouldrecursefalse) but traverses nodes not just elements.
 
 #### Arguments
 
 `node: Node`: node to traverse children of.
+
 `callback: (child: Node) => void`: Callback to pass each child node.
+
 `shouldRecurse: boolean | (child: Node) => boolean = false`: Set to traverse deeper than immediate children of `node`.
 
 #### Returns
@@ -74,7 +78,9 @@ Callback is invoked with the child node.
 #### Arguments
 
 `node: Node`: node to traverse children of.
+
 `callback: (child: Node) => T`: The function invoked per iteration.
+
 `shouldRecurse: boolean | (child: Node) => boolean = false`: Set to traverse deeper than immediate children of `node`.
 
 #### Returns
@@ -91,8 +97,11 @@ Reduces the node's children to a value which is the accumulated result of runnin
 #### Arguments
 
 `node: Node`: node to traverse children of.
+
 `callback: (child: Node) => T`: The function invoked per iteration.
+
 `acc: T`: The initial value.
+
 `shouldRecurse: boolean | (child: Node) => boolean = false`: Set to traverse deeper than immediate children of `node`.
 
 #### Returns
