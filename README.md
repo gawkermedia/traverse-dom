@@ -1,5 +1,7 @@
 # traverse-dom
 
+[![Build Status](https://travis-ci.org/gawkermedia/traverse-dom.svg?branch=master)](https://travis-ci.org/gawkermedia/traverse-dom)
+
 Simple DOM traversal method with some tolerance for modification of the element tree during traversal.
 Intended to be [more performant](http://jsperf.com/testfdgdfgfdgfdgfdgdf/4) than
 [NodeIterator](https://developer.mozilla.org/en/docs/Web/API/NodeIterator) (due to lack of setup cost),
