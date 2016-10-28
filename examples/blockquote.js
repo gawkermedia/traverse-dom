@@ -1,10 +1,9 @@
 /* globals Element */
-// @flow
 
 import $ from 'jquery';
 import assert from 'assert';
 
-import traverse, { traverseReduce } from '../src/traverse-dom';
+import traverse, { traverseReduce } from '../dist/traverse-dom';
 
 const originalDOM = $(`
 <div id="blockquote-clean">
