@@ -2,7 +2,7 @@
   "name": "traverse-dom",
   "version": "1.0.1",
   "description": "Simple DOM traversal methods with some tolerance for modification of the element tree during traversal",
-  "main": "./traverse-dom.js",
+  "main": "traverse-dom.js",
   "scripts": {
     "clean": "rm -f dist/*.js*",
     "test": "testem ci -P 10",
@@ -16,7 +16,7 @@
     "postpublish": "./bin/postpublish.sh"
   },
   "files": [
-    "./traverse-dom.js.flow"
+    "traverse-dom.js.flow"
   ],
   "repository": {
     "type": "git",
