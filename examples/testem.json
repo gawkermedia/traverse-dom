@@ -3,7 +3,7 @@
   "src_files": ["examples/blockquote.js"],
   "serve_files": ["dist/examples-bundle.js"],
   "before_tests": "browserify -t [ babelify ] examples/*.js -o dist/examples-bundle.js",
-  "on_exit": "del-cli dist/examples-bundle.js",
+  "on_exit": "rm dist/examples-bundle.js",
   "launch_in_dev": ["Chrome", "Firefox", "Safari"],
 	"launch_in_ci": ["PhantomJS"]
 }

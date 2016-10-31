@@ -3,7 +3,7 @@
   "src_files": ["src/traverse-dom.js"],
   "serve_files": ["dist/tests-bundle.js"],
   "before_tests": "browserify -t [ babelify ] -t [ html2js-browserify --minify --collapseWhitespace ] test/index.js -o dist/tests-bundle.js",
-  "on_exit": "del-cli dist/tests-bundle.js",
+  "on_exit": "rm dist/tests-bundle.js",
   "launch_in_dev": ["Chrome", "Firefox", "Safari"],
 	"launch_in_ci": ["PhantomJS"]
 }

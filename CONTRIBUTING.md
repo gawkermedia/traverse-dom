@@ -34,6 +34,22 @@ $ npm run lint
 4. Ensure the test suite passes.
 5. Make sure your code lints.
 
+## Create new release
+
+To create a new tagged release and push to git run
+```sh
+$ npm run release [releaseType]
+```
+Where releaseType is one of these semver releases `[major | minor | patch | premajor | preminor | prepatch | prerelease]`
+
+Before publishing to npm be sure to run the release script on master,
+then create the npm branch by running:
+```sh
+$ ./bin/npm-git
+```
+This will create a mirror from master but in a form that it will eventually be deployed to npm.
+Now you can publish to npm.
+
 ## License
 
 By contributing, you agree that your contributions will be licensed

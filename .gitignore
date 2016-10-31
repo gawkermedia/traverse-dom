@@ -34,6 +34,3 @@ jspm_packages
 .idea
 .vscode
 jsconfig.json
-
-# Lib
-lib
