@@ -23,4 +23,4 @@ cd npm
 git init
 git add .
 git commit -m "Deploy master to NPM branch"
-git push --force --quiet master:npm
+git push --force "git@github.com:gawkermedia/traverse-dom.git" master:npm

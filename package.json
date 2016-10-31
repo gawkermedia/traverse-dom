@@ -16,7 +16,6 @@
     "postpublish": "./bin/postpublish.sh"
   },
   "files": [
-    "./traverse-dom.js",
     "./traverse-dom.js.flow"
   ],
   "repository": {

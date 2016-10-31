@@ -40,13 +40,13 @@ over what element's children to traverse.
 
 usage example: [moving elements outside of another element.](examples/blockquote.js#L24)
 
-#### Arguments
+**Arguments**
 
  1. `element: Element` - Element to traverse children of.
  2. `callback: (child: Element) => void` - Callback to pass each child element.
  3. `shouldRecurse: boolean | (child: Element) => boolean = false` - Set to traverse deeper than immediate children of `element`.
 
-#### Returns
+**Returns**
 
 `Element` - Returns the same element the function was called with.
 
@@ -56,13 +56,13 @@ usage example: [moving elements outside of another element.](examples/blockquote
 
 Same as [traverse](README.md#traverseelement-callback-shouldrecursefalse) but traverses nodes not just elements.
 
-#### Arguments
+**Arguments**
 
  1. `node: Node` - Node to traverse children of.
  2. `callback: (child: Node) => void` - Callback to pass each child node.
  3. `shouldRecurse: boolean | (child: Node) => boolean = false` - Set to traverse deeper than immediate children of `node`.
 
-#### Returns
+**Returns**
 
 `Node` - Returns the same node the function was called with.
 
@@ -75,13 +75,13 @@ Callback is invoked with the child node.
 
 usage example: Collecting all the node names recursively.
 
-#### Arguments
+**Arguments**
 
  1. `node: Node` - Node to traverse children of.
  2. `callback: (child: Node) => T` - The function invoked per iteration.
  3. `shouldRecurse: boolean | (child: Node) => boolean = false` - Set to traverse deeper than immediate children of `node`.
 
-#### Returns
+**Returns**
 
 `Array<T>` - Returns the new mapped array.
 
@@ -94,14 +94,14 @@ Reduces the node's children to a value which is the accumulated result of runnin
 
 usage example: [collecting all the node names recursively while filtering the result.](examples/blockquote.js#L38)
 
-#### Arguments
+**Arguments**
 
  1. `node: Node` - Node to traverse children of.
  2. `callback: (child: Node) => T` - The function invoked per iteration.
  3. `acc: T` - The initial value.
  4. `shouldRecurse: boolean | (child: Node) => boolean = false` - Set to traverse deeper than immediate children of `node`.
 
-#### Returns
+**Returns**
 
 `T` - Returns the accumulated value.
 
