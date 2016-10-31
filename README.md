@@ -1,5 +1,6 @@
 # traverse-dom
 
+[![npm version](https://badge.fury.io/js/traverse-dom.svg)](https://badge.fury.io/js/traverse-dom)
 [![Build Status](https://travis-ci.org/gawkermedia/traverse-dom.svg?branch=master)](https://travis-ci.org/gawkermedia/traverse-dom)
 
 Simple DOM traversal method with some tolerance for modification of the element tree during traversal.
