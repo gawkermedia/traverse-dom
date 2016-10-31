@@ -30,8 +30,8 @@ fs.writeFileSync('./package.json', newJSON);
 // Commit and create tag.
 const gitCommands = [
 	'git add package.json dist/',
-	`git commit -m "release ${nextVersion}"`,
-	`git tag ${nextVersion} -m "release ${nextVersion}"`,
+	`git commit -m "release v${nextVersion}"`,
+	`git tag v${nextVersion} -m "release v${nextVersion}"`,
 ];
 
 exec(gitCommands.join(' && '), (error, stdout, stderr) => {

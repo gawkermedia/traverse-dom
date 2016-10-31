@@ -12,7 +12,8 @@
     "lint:examples": "eslint examples",
     "build": "cp src/traverse-dom.js dist/traverse-dom.js.flow && babel src --out-dir dist",
 		"release": "node bin/next-version.js",
-    "prepublish": "./bin/prepublish"
+    "prepublish": "./bin/prepublish.sh",
+    "postpublish": "./bin/postpublish.sh"
   },
   "files": [
     "./traverse-dom.js",
