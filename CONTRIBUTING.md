@@ -5,9 +5,9 @@ Contributions are always welcome, no matter how large or small.
 ## Setup
 
 ```sh
-$ git clone
-$ cd traverse
-$ yarn
+$ git clone https://github.com/gawkermedia/traverse-dom.git
+$ cd traverse-dom
+$ npm install # Using yarn over npm is recommended.
 ```
 
 ## Building
@@ -19,7 +19,7 @@ $ npm run build
 ## Testing
 
 ```sh
-$ npm run test
+$ npm run test:watch
 ```
 
 ```sh
@@ -33,6 +33,8 @@ $ npm run lint
 3. If you've changed APIs, update the documentation.
 4. Ensure the test suite passes.
 5. Make sure your code lints.
+6. Run `npm run prepublish` to check if everything passes.
+7. Create a PR.
 
 ## Create new release
 
