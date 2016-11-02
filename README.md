@@ -8,11 +8,13 @@ Intended to be [more performant](http://jsperf.com/testfdgdfgfdgfdgfdgdf/4) than
 [NodeIterator](https://developer.mozilla.org/en/docs/Web/API/NodeIterator) (due to lack of setup cost),
 but less full-featured.
 
-## Installing traverse-dom
+## Installing traverse-dom via [npm](http://npmjs.org/)
 
 ```sh
-$ npm install traverse-dom
+$ npm install --save traverse-dom
 ```
+
+## Installing traverse-dom via [yarn](https://yarnpkg.com/)
 
 ```sh
 $ yarn add traverse-dom

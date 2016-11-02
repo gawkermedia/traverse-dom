@@ -5,8 +5,8 @@
   "main": "traverse-dom.js",
   "scripts": {
     "clean": "rm -f dist/*.js*",
-    "test": "testem ci -P 10",
-    "test:watch": "testem",
+    "test": "testem ci -f -P 10",
+    "test:dev": "testem",
     "test:examples": "testem ci -f examples/testem.json",
     "lint": "eslint src test && flow check",
     "lint:examples": "eslint examples",

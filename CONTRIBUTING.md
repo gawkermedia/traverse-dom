@@ -19,7 +19,7 @@ $ npm run build
 ## Testing
 
 ```sh
-$ npm run test:watch
+$ npm run test:dev
 ```
 
 ```sh

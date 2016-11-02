@@ -9,7 +9,7 @@
 ./node_modules/.bin/babel src --out-dir npm
 cp src/traverse-dom.js npm/traverse-dom.js.flow
 
-# Ensure a vanilla package.json before deploying so other tools do not interpret
+# Ensure a vanilla package.json so other tools do not interpret
 # The built output as requiring any further transformation.
 node -e "var package = require('./package.json'); \
   delete package.scripts; \
