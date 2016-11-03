@@ -1,6 +1,6 @@
 {
   "name": "traverse-dom",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Simple DOM traversal methods with some tolerance for modification of the element tree during traversal",
   "main": "traverse-dom.js",
   "scripts": {
