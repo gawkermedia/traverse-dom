@@ -12,5 +12,5 @@ script:
   - npm run test:examples
 
 branches:
-  only:
-    - master
+  except:
+  - npm
