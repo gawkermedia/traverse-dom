@@ -13,7 +13,7 @@ export function traverse(
 	const shouldRecurseFn = result(shouldRecurse);
 
 	while (child) {
-		if (shouldRecurseFn(element) && element.children.length) {
+		if (shouldRecurseFn(child) && child.children.length) {
 			traverse(child, callback, shouldRecurse);
 		}
 
@@ -35,7 +35,7 @@ export function traverseNodes(
 	const shouldRecurseFn = result(shouldRecurse);
 
 	while (child) {
-		if (shouldRecurseFn(node) && node.childNodes.length) {
+		if (shouldRecurseFn(child) && child.childNodes.length) {
 			traverseNodes(child, callback, shouldRecurse);
 		}
 

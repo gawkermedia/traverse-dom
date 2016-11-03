@@ -4,7 +4,7 @@
 import $ from 'jquery';
 import assert from 'assert';
 
-import { pushNodeNamesTo } from './utils/callbacks';
+import { pushNodeNamesTo, getNodeName } from './utils/callbacks';
 
 import {
 	traverse,
@@ -70,16 +70,36 @@ describe('DOM traversal', () => {
 			traverse(deepHtml, pushNodeNamesTo(result), () => true);
 			assert.deepEqual(result, deepHtmlResult);
 		});
+
+		it('traverse should skip children of a specified element', () => {
+			const html = $('<div><p><i>foo</i></p><p class="skip"><i>bar</i></p><p><i>bat</i></p></div>').get(0);
+			// Adds a the .touched className to every <i> element.
+			const touchItalic = (child) => {
+				if (child.nodeName === 'I') {
+					child.classList.add('touched');
+				}
+			};
+
+			// Skip children of the element with the .skip className
+			traverse(html, touchItalic, child => !child.classList.contains('skip'));
+
+			assert.equal(html.querySelectorAll('.touched').length, 2);
+		});
 	});
 
 	describe('utilities', () => {
 		describe('map', () => {
 			it('should transform all top level nodes', () => {
-				const getNodeName = node => node.nodeName.toLowerCase();
-
 				assert.deepEqual(
 					traverseMap(simpleHtml, getNodeName),
 					['p', '#text', 'p']
+				);
+			});
+
+			it('should transform all nodes except the ones it should skip', () => {
+				assert.deepEqual(
+					traverseMap(simpleDeepHtml, getNodeName, child => getNodeName(child) !== 'span'),
+					['span', 'p', 'div']
 				);
 			});
 		});
