@@ -4,7 +4,7 @@ function result<T>(param: (boolean | (t: T) => boolean)): (t: T) => boolean {
 	return (typeof param === 'function') ? param : () => Boolean(param);
 }
 
-export default function traverse(
+export function traverse(
 	element: Element,
 	callback: (child: Element) => void,
 	shouldRecurse: boolean | (child: Element) => boolean = false,

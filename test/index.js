@@ -6,7 +6,8 @@ import assert from 'assert';
 
 import { pushNodeNamesTo } from './utils/callbacks';
 
-import traverse, {
+import {
+	traverse,
 	traverseNodes,
 	traverseMap,
 } from '../src/traverse-dom';

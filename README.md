@@ -23,7 +23,7 @@ $ yarn add traverse-dom
 ## Usage
 
 ```
-import traverse from 'traverse-dom';
+import { traverse } from 'traverse-dom';
 traverse(myElement, (child) => { mutateElement(child) });
 ```
 
