@@ -3,6 +3,7 @@
 <PROJECT_ROOT>/dist/.*
 <PROJECT_ROOT>/lib/.*
 <PROJECT_ROOT>/node_modules/babel.*
+<PROJECT_ROOT>/node_modules/kefir/.*
 <PROJECT_ROOT>/flow-typed/.*
 <PROJECT_ROOT>/test/fixtures/.*
 

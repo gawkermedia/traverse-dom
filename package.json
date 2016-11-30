@@ -10,9 +10,9 @@
     "test:examples": "testem ci -f examples/testem.json",
     "lint": "eslint src test && flow check",
     "lint:examples": "eslint examples",
-		"build": "npm run clean && npm run build:dist && npm run build:flow",
+    "build": "npm run clean && npm run build:dist && npm run build:flow",
     "build:dist": "babel src --out-dir dist",
-		"build:flow": "flow-copy-source -v src dist",
+    "build:flow": "flow-copy-source -v src dist",
     "release": "node bin/next-version.js",
     "prepublish": "./bin/prepublish.sh",
     "postpublish": "./bin/postpublish.sh"
@@ -37,7 +37,7 @@
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.18.0",
-    "babel-eslint": "7",
+    "babel-eslint": "^7.1.1",
     "babel-istanbul": "^0.11.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-flow-strip-types": "^6.14.0",
