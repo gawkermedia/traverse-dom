@@ -1,0 +1,23 @@
+{
+  "name": "traverse-dom",
+  "version": "3.0.0",
+  "description": "Simple DOM traversal methods with some tolerance for modification of the element tree during traversal",
+  "main": "traverse-dom.js",
+  "files": [
+    "traverse-dom.js.flow"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gawkermedia/traverse-dom.git"
+  },
+  "keywords": [
+    "traverse",
+    "dom"
+  ],
+  "author": "Oliver Kovacs <oliver@kinja.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gawkermedia/traverse-dom/issues"
+  },
+  "homepage": "https://github.com/gawkermedia/traverse-dom#traverse-dom"
+}
