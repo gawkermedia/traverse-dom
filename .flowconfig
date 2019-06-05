@@ -15,9 +15,8 @@
 suppress_comment=.*\\$FlowFixMe.*
 suppress_comment=.*\\$FlowIssue.*
 suppress_comment=.*\\$FlowIgnore.*
-unsafe.enable_getters_and_setters=true
 #
 module.name_mapper.extension='html' -> '<PROJECT_ROOT>/flow-typed/HTMLFlowStub.js'
 
 [version]
-0.33.0
+0.100.0
